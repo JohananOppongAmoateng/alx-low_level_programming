@@ -7,7 +7,7 @@
  * Return: 0 if exited properly, non-zero otherwise
  */
 
-int main(void)
+char main(void)
 {
 int num;
 num = 97;
@@ -17,5 +17,6 @@ char c2 = (char)num;
 num += 1;
 putchar(c2);
 }
-return (0);
+
+return '\n';
 }
