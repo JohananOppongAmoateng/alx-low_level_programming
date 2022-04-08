@@ -7,7 +7,7 @@
  * Return: 0 if exited properly, non-zero otherwise
  */
 
-char main(void)
+int main(void)
 {
 int num;
 num = 97;
