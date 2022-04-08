@@ -14,12 +14,11 @@
 int main(void)
 {
 	int n;
+	int rs;
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
 	/* your code goes there */
-	int rs;
-
 	rs = n % 10;
 	if (rs > 5)
 	{
