@@ -17,5 +17,5 @@ char c2 = (char)num;
 num += 1;
 putchar(c2);
 }
-return (0)
+return (0);
 }
