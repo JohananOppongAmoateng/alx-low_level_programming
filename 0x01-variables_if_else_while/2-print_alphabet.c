@@ -13,10 +13,13 @@ int num;
 num = 97;
 while (num <= 122)
 {
+
 char c2 = (char)num;
 num += 1;
 putchar(c2);
-}
 
-return '\n';
+
+}
+putchar('\n');
+return (0);
 }
