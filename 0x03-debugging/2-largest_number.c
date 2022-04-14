@@ -13,8 +13,6 @@
  * Return: largest number
  */
 
-int main(void)
-{
 
 int largest_number(int a, int b, int c)
 {
@@ -37,6 +35,5 @@ else
 large = b;
 }
 
-return large;
-}
+return (large);
 }
