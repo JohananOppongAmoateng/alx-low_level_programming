@@ -18,25 +18,25 @@ int main(void)
 
 int largest_number(int a, int b, int c)
 {
-int largest;
+int large;
 
 if (a > b && a > c)
 {
-largest = a;
+large = a;
 }
 else if (b > a && b > c)
 {
-largest = b;
+large = b;
 }
-else if (c > b)
+else if (c > b && c > a)
 {
-    largest = c;
+    large = c;
 }
 else
 {
-largest = b;
+large = b;
 }
 
-return largest;
+return large;
 }
 }
