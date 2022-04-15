@@ -1,9 +1,6 @@
 #include "main.h"
 
-/**
-* main - causes an infinite loop
-* Return: 0
-*/
+
 
 /**
  * largest_number - returns the largest of 3 numbers
@@ -18,17 +15,17 @@ int largest_number(int a, int b, int c)
 {
 int large;
 
-if (a > b && a > c)
+if (a >= b && a >= c)
 {
 large = a;
 }
-else if (b > a && b > c)
+else if (b >= a && b >= c)
 {
 large = b;
 }
-else if (c > b && c > a)
+else if (c >= b && c >= a)
 {
-    large = c;
+large = c;
 }
 else
 {
