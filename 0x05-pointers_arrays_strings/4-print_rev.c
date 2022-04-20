@@ -18,7 +18,7 @@ leng = i - 1;
 int j;
 for (j = 0 ; leng >= j;leng--)
 {
-_putchar(s[j]);
+_putchar(s[leng]);
 }
 _putchar("\n");
 }
