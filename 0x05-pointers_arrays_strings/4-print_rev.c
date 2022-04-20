@@ -18,7 +18,7 @@ i++;
 
 leng = i - 1;
 
-for (j = 0 ; leng >= j;leng--)
+for (j = 0 ; leng >= j ; leng--)
 {
 _putchar(s[leng]);
 }
