@@ -10,9 +10,8 @@ while (s[i] != '\0')
 i++;
 }
 int leng = i-1;
-for (int j= 0; leng>=j;i--)
+for (int j= 0; leng>=j;leng--)
 {
 _putchar(s[j]);
 }
 }
-
