@@ -22,5 +22,5 @@ for (j = 0 ; leng >= j;leng--)
 {
 _putchar(s[leng]);
 }
-_putchar("\n");
+_putchar('\n');
 }
