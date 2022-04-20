@@ -21,9 +21,9 @@ i++;
 for (j = 0 ; j < i ; j++)
 {
 
-if (i % 2 == 1)
+if (j % 2 == 1)
 {
-_putchar(str[i]);
+_putchar(str[j]);
 }
 }
 _putchar('\n');
