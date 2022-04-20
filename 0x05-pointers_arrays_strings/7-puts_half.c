@@ -1,6 +1,14 @@
 #include "main.h"
 
 
+/**
+ * _puts_half - returns the length of a string
+ * @str: string to evaluate
+ *
+ * Return: the length of the string
+ */
+
+
 void puts_half(char *str)
 {
 
@@ -16,7 +24,7 @@ i++;
 if (i % 2 == 1)
 {
 odd = i - 1;
-for (odd = odd / 2 ; odd <= i ; odd++ )
+for (odd = odd / 2 ; odd <= i ; odd++)
 {
 _putchar(str[odd]);
 }
@@ -24,7 +32,7 @@ _putchar(str[odd]);
 }
 else
 {
-for (even = i / 2 ; even <= i ; odd++ )
+for (even = i / 2 ; even <= i ; odd++)
 {
 _putchar(str[even]);
 }
