@@ -35,7 +35,7 @@ else
 {
 for (even = i / 2 ; even <= i ; even++)
 {
-_putchar(str[even-1]);
+_putchar(str[even + 1]);
 }
 _putchar('\n');
 }
