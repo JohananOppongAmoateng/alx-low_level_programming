@@ -23,8 +23,9 @@ i++;
 }
 if (i % 2 == 1)
 {
-odd = i - 1;
-for (odd = odd / 2 ; odd <= i ; odd++)
+odd = (i - 1) / 2;
+
+for (odd ;odd <= i ; odd++)
 {
 _putchar(str[odd]);
 }
@@ -36,6 +37,7 @@ for (even = i / 2 ; even <= i ; even++)
 {
 _putchar(str[even]);
 }
+_putchar('\n');
 }
 /**
  * _putchar('\n');
