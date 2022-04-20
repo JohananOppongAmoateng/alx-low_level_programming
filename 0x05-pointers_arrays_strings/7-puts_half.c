@@ -32,9 +32,11 @@ _putchar(str[odd]);
 }
 else
 {
-for (even = i / 2 ; even <= i ; odd++)
+for (even = i / 2 ; even <= i ; even++)
 {
 _putchar(str[even]);
 }
 }
+_putchar("\n");
+return (0);
 }
