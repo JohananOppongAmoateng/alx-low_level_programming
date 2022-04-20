@@ -27,7 +27,7 @@ odd = i - 1;
 
 for (odd = odd / 2 ; odd <= i ; odd++)
 {
-_putchar(str[odd - 1]);
+_putchar(str[odd]);
 }
 _putchar('\n');
 }
