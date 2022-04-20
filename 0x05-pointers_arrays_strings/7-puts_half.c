@@ -2,7 +2,7 @@
 
 
 /**
- * _puts_half - returns the length of a string
+ * puts_half - returns the length of a string
  * @str: string to evaluate
  *
  * Return: the length of the string
@@ -25,7 +25,7 @@ if (i % 2 == 1)
 {
 odd = i - 1;
 
-for (odd = odd / 2 ; odd < i ; odd++)
+for (odd = odd / 2 ; odd <= i ; odd++)
 {
 _putchar(str[odd]);
 }
@@ -39,8 +39,4 @@ _putchar(str[even]);
 }
 _putchar('\n');
 }
-/**
- * _putchar('\n');
- *return (0);
- */
 }
