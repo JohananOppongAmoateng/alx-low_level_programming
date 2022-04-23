@@ -1,32 +1,30 @@
 #include "main.h"
-
-
 /**
- * _strcat - Short description, single line
- * @dest: Description of parameter x
-(* @src:a blank line
- * Description: Longer description of the function)?
-(* section header: Section description)*
- * Return: Description of the returned value
+ * _strcat - concatenates two strings
+ * @dest: input parameter string
+ * @src: input parameter string
+ *
+ * Return: dest
  */
 char *_strcat(char *dest, char *src)
 {
-int i;
-int j;
+	int a;
+	int b;
 
-j = 0;
-i = 0;
-while (dest[i] != '\0')
-{
-i++;
-}
+	a = 0;
 
-while (src[j] != '\0')
-{
-dest[i] = src[j];
-i++;
-j++;
-}
-dest[i] = '\0';
-return dest;
+	while (dest[a] != 0)
+	{
+		a++;
+	}
+
+	b = 0;
+
+	while (src[b] != 0)
+	{
+		dest[a] = src[b];
+		a++;
+		b++;
+	}
+	return (dest);
 }
