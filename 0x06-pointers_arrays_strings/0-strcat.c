@@ -16,14 +16,14 @@ int j;
 
 j = 0;
 i = 0;
-while (src[i] != 0)
+while (src[i] != '\0')
 {
 i++;
 }
 
-while (dest[j] != 0)
+while (dest[j] != '\0')
 {
-src[i] = dest[j];
+dest[i] = src[j];
 i++;
 j++;
 }
