@@ -1,0 +1,7 @@
+{
+	"files.associations": {
+		"up_to_date": "shellscript",
+		"*.html": "html",
+		"0-object_like_macro.h": "c"
+	}
+}
