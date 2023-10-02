@@ -3,7 +3,7 @@
 #include "main.h"
 
 /**
-* aloc_grid - adsa
+* alloc_grid-adsa
 * @width:dfsf
 * @height:dsfs
 * Return:Adas
@@ -20,7 +20,7 @@ int **alloc_grid(int width, int height)
 		return (NULL);
 	}
 
-	grid = malloc(height *  sizeof(int * ));
+	grid = malloc(height *  sizeof(int *));
 	if (grid == NULL)
 	{
 		return (NULL);
@@ -31,7 +31,7 @@ int **alloc_grid(int width, int height)
 		grid[i] = malloc(width * sizeof(int));
 		if (grid[i] == NULL)
 		{
-			for (j=0; j < i; j++)
+			for (j = 0; j < i; j++)
 			{
 				free(grid[j]);
 			}
