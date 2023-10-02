@@ -3,10 +3,11 @@
 #include <stdlib.h>
 
 /**
-* create_array-function creates an array of chars and initializes it with a specific char
+* create_array-function creates an array of
+* chars and initializes it with a specific char
 * @size: size of the array
 * @c: specific chaar to initialize array with
-Return : array
+* Return:array
 */
 
 char *create_array(unsigned int size, char c)
@@ -17,17 +18,18 @@ char *create_array(unsigned int size, char c)
 	arr = malloc(size * sizeof(char));
 	if (size == 0)
 	{
-		return NULL;
+		return (NULL);
 	}
 
 	if (arr == NULL)
 	{
-		return NULL;
+		return (NULL);
 	}
 
 	while (i < size)
 	{
 		arr[i] = c;
+		i++;
 	}
 	return (arr);
 }
