@@ -10,12 +10,12 @@
 * Return:sda
 */
 
-char *string_nconcat(char *s1,char *s2,unsigned int n)
+char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	int s2_len = strlen(s2);
+	unsigned int s2_len = strlen(s2);
 	int s1_len = strlen(s1);
-	int i = 0;
-	int b = 0;
+	unsigned int i = 0;
+	unsigned int b = 0;
 
 	char *a = malloc(s2_len + s1_len + 1);
 
@@ -26,7 +26,7 @@ char *string_nconcat(char *s1,char *s2,unsigned int n)
 
 	while (s1[i] != '\0')
 	{
-		a[i] = s[i];
+		a[i] = s1[i];
 		i++;
 	}
 
@@ -49,6 +49,6 @@ char *string_nconcat(char *s1,char *s2,unsigned int n)
 			b++;
 		}
 	}
-	return (s);
+	return (a);
 
 }
