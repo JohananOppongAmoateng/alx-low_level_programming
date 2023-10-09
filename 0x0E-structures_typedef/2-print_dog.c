@@ -6,11 +6,11 @@
 * @d:sadsa
 */
 
-void print_dog(struct dog *d) 
+void print_dog(struct dog *d)
 {
 	if (d == NULL)
 	{
-		return; // Exit early if d is NULL
+		return;
 	}
 
 	printf("Name: %s\n", (d->name != NULL) ? d->name : "(nil)");
