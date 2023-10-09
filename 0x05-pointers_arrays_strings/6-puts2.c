@@ -1,15 +1,21 @@
-#include <stdio.h>
 #include "main.h"
 
 /**
-* puts2-Sas
-* @str:asas
-*/
-
+ * puts2 - prints part of a string
+ * @str: string to be printed
+ *
+ * Return: void
+ **/
 void puts2(char *str)
 {
-	for (int i = 0; str[i] == '\0'; i += 2)
-	{
-		_putchar(str[i]);
-	}
+int i = 0;
+while (str[i] != '\0')
+{
+if (i % 2 == 0)
+_putchar(str[i]);
+i++;
 }
+
+_putchar('\n');
+}
+

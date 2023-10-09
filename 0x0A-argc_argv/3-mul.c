@@ -1,25 +1,27 @@
-#include <stdlib.h>
 #include <stdio.h>
-#include "main.h"
-
+#include <stdlib.h>
 /**
-* main-main
-* @argc:dsds
-* @argv:asda
-* Return:(0);
+* main - prints multiplication
+*of two numbers
+*@argc: number of arguments
+*@argv: array of arguments
+*Return: returns 0
 */
 
 int main(int argc, char *argv[])
 {
-	int i;
+	int i, j, mul;
 
-	if (argc != 3)
+	if (argc <= 2)
 	{
 		printf("Error\n");
 		return (1);
 	}
-	i = atoi(argv[1]) * atoi(argv[2]);
-	printf("%d\n", i);
+
+	i = atoi(argv[1]);
+	j = atoi(argv[2]);
+	mul = i * j;
+
+	printf("%d\n", mul);
 	return (0);
 }
-

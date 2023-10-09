@@ -1,17 +1,15 @@
 #include <stdio.h>
-#include "main.h"
 
 /**
-* main-main
-* @argc:asd
-* @argv:sd
-* Return:s
+* main - prints the number of arguments
+*@argc: number of arguments
+*@argv:array of arguments
+*Return: the number of arguments
 */
 
-int main(int argc, char *argv[])
+int main(int argc, char __attribute__((__unused__)) *argv[])
 {
-	(void)argv;
-
 	printf("%d\n", argc - 1);
+
 	return (0);
 }

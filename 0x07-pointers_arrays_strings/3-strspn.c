@@ -1,36 +1,31 @@
-#include <stdio.h>
 #include "main.h"
-
 /**
-* _strspn-sa
-* @s:ad
-* @accept:sada
-* Return:adffs
+*_strspn - search the number of bytes in the initial
+* segment of s which consist only of bytes from accept
+*@s:segment targeted
+*@accept:reference bytes container
+*
+*Return:returns the number of bytes in the initial
+* segment of s which consist only of bytes from accept
 */
-
 unsigned int _strspn(char *s, char *accept)
-	{
-	unsigned int count = 0;
-	int found;
-	int a = 0;
+{
+	unsigned int bytes = 0;
 	int i;
-	while (s[a] != '\0')
+
+	while (*s)
+	{
+		for (i = 0; accept[i]; i++)
 		{
-        		found = 0;
-        		for (i= 0; accept[i] != '\0'; i++)
+			if (accept[i] == *s)
 			{
-        	 		if (s[a] == accept[i])
-				{
-        	        		found = 1;
-               				break;
-            			}
-        		}
-        		if (!found)
-			{
-            			break;
-        		}
-        		count++;
-        		a++;
-    		}
-    	return (count);
+				bytes++;
+				break;
+			}
+			else if ((accept[i + 1]) == '\0')
+				return (bytes);
+		}
+		s++;
+	}
+	return (bytes);
 }
