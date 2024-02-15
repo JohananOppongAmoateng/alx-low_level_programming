@@ -1,12 +1,18 @@
-#include<stdio.h>
+#include <stdio.h>
+#include <string.h>
 
 /**
- * main - Main Fuction
- *
- * Return: 1 if the number is positive. 0 otherwise
- */
+*main - Main function of my project
+*
+*
+*Return: return 0 everytime
+*/
 int main(void)
 {
-	puts("\"Programming is like building a multilingual puzzle");
+
+	char displayed[52];
+
+	strcpy(displayed, "\"Programming is like building a multilingual puzzle");
+	puts(displayed);
 	return (0);
 }

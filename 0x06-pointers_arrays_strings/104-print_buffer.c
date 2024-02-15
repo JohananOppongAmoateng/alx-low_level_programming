@@ -11,7 +11,7 @@
 * Prints the byte if it is printable; if not, prints `.`.
 * Each line ends with a new line `\n`.
 * If the inputted byte size is 0 or less, the function only prints a new line.
-*@b: number of bytes
+*@b: number of byte
 *@size: size of the byte
 */
 void print_buffer(char *b, int size)
@@ -50,4 +50,3 @@ void print_buffer(char *b, int size)
 		i += 10;
 	}
 }
-

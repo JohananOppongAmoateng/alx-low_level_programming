@@ -7,9 +7,9 @@
 /**
 *struct dog - a new type of data
 *representing a dog
-*@name: name of dog
-*@age: age of dog
-*@owner: owner's name
+*@name: dog's name
+*@age: dog's age
+*@owner: name of dog owner
 */
 struct dog
 {

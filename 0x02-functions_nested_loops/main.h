@@ -1,7 +1,7 @@
-
+#include <unistd.h>
+#include <string.h>
 /**
 *File:main.h
-*Author:Pericles Adjovi
 *Desc:header file containing functions declaration
 */
 

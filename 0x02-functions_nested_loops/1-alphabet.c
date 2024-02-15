@@ -5,11 +5,13 @@
 *Return: no return
 */
 void print_alphabet(void)
+
 {
-int letter;
-for (letter = 'a'; letter <= 'z'; letter++)
+char ch;
+for (ch = 'a' ; ch <= 'z'; ch++)
+
 {
-_putchar (letter);
+_putchar(ch);
 }
-_putchar (10);
+_putchar(10);
 }
