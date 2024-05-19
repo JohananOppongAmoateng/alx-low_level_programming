@@ -1,1 +1,1 @@
-Soffrn
+Tasks for bit manipulation

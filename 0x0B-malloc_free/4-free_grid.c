@@ -1,18 +1,17 @@
 #include "main.h"
+#include <stdlib.h>
 
 /**
-* free_grid - frees a 2d array
-*@grid:memory block to be freed
-*@height:height of the array
-*Return:returns void
-*/
+ * free_grid - free up a 2d grid
+ * @grid: double pointer 2d grid
+ * @height: height of grid
+ */
 
 void free_grid(int **grid, int height)
 {
-int i;
+	int s;
 
-for (i = 0; i < height; i++)
-free(grid[i]);
-
-free(grid);
+	for (s = 0; s < height; s++)
+		free(grid[s]);
+	free(grid);
 }

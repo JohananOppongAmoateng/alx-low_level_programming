@@ -1,33 +1,43 @@
 #include <stdio.h>
+#include <time.h>
+#include <stdlib.h>
+
 /**
-*main - Prints all combinations of three digits with,
-* and space followed by new line
-*
-*Return: returns 0
-*/
+ * main - entry point
+ * Description: a program that prints all possible different
+ * combination of two digits.
+ * Return: return 0 always (success)
+ */
+
 int main(void)
 {
-	int digit1, digit2, digit3;
+	int a, b, c;
 
-	for (digit1 = 0; digit1 < 9; digit1++)
+	for (a = '0'; a <= '9'; a++)
 	{
-		for (digit2 = digit1 + 1; digit2 < 9; digit2++)
+		for (b = '0'; b <= '9'; b++)
 		{
-			for (digit3 = digit2 + 1; digit3 < 10; digit3++)
+			for (c = '0'; c  <= '9'; c++)
 			{
+				if (a < b && b < c)
+				{
+					putchar(a);
+					putchar(b);
+					putchar(c);
 
-				putchar((digit1 % 10) + '0');
-				putchar((digit2 % 10) + '0');
-				putchar((digit3 % 10) + '0');
-
-				if (digit1 == 7 && digit2 == 8 && digit3 == 9)
-					continue;
-
-				putchar(',');
-				putchar(' ');
+					if (a != '7' || b != '8' || c != '9')
+					{
+						putchar(',');
+						putchar(' ');
+					}
+				}
 			}
 		}
 	}
+
+
 	putchar('\n');
+
 	return (0);
+
 }

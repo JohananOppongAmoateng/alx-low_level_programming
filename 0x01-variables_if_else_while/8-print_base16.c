@@ -1,27 +1,34 @@
 #include <stdio.h>
-#include <ctype.h>
+#include <time.h>
+#include <stdlib.h>
+
 /**
-*main - Prints all single digits of base 16 followed by new line
-*
-*Return: returns 0
-*/
+ * main - entry point
+ * Description: A program that prints all the numbers of base 16 in lowercase
+ * followed by a new line.
+ * Return: return 0 always (success)
+ */
+
 int main(void)
 {
-	int digit;
+	char ch = '0';
 
-	for (digit = '0'; digit <= '9'; digit++)
-	{
-		putchar(digit);
-		if (digit == '9')
-		{
-			digit = 'a';
-			for (; digit <= 'f'; digit++)
-			{
-				putchar(digit);
-			}
-			break;
-		}
-	}
+	while (ch <= '9')
+{
+	putchar(ch);
+	ch++;
+}
+
+	ch = 'a';
+
+	while (ch <= 'f')
+{
+	putchar(ch);
+	ch++;
+}
+
 	putchar('\n');
+
 	return (0);
+
 }

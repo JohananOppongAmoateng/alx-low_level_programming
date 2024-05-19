@@ -1,36 +1,28 @@
 #include "main.h"
+#include <stdlib.h>
+#include <stdio.h>
 
 /**
-* _strdup - returns a pointer to a newly allocated
-*space in memory, which contains a copy of the
-*string given as a parameter.
-*@str:String to be copied
-*
-*Return: NULL in case of error, pointer to allocated
-*space
-*/
-
+ *_strdup - a function that returns a pointer to a newly allocated
+ *space in memory, which contains a copy of the string given as a parameter.
+ *@str: string
+ *Return: address of the newly allocated memory
+ */
 char *_strdup(char *str)
 {
-char *cpy;
-int index, len;
+	char *dump;
+	int i, core = 0;
 
-if (str == NULL)
-return (NULL);
+	if (str == NULL)
+		return (NULL);
+	while (str[core] != '\0')
+		core++;
+	dump = (char *)malloc((sizeof(char) * core) + 1);
+	if (dump == NULL)
+		return (NULL);
+	for (i = 0; i < core; i++)
+		dump[i] = str[i];
+	dump[core] = '\0';
 
-for (index = 0; str[index]; index++)
-len++;
-cpy = malloc(sizeof(char) * (len + 1));
-
-if (cpy == NULL)
-return (NULL);
-
-for (index = 0; str[index]; index++)
-{
-cpy[index] = str[index];
-}
-
-cpy[len] = '\0';
-
-return (cpy);
+	return (dump);
 }

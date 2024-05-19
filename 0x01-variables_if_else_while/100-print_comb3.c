@@ -1,29 +1,39 @@
 #include <stdio.h>
+#include <time.h>
+#include <stdlib.h>
+
 /**
-*main - Prints all combinations of two digits with,
-* and space followed by new line
-*
-*Return: returns 0
-*/
+ * main - entry point
+ * Description: a program that prints all possible different
+ * combination of two digits.
+ * Return: return 0 always (success)
+ */
+
 int main(void)
 {
-	int digit1, digit2;
+	int a, b;
 
-	for (digit1 = 0; digit1 < 9; digit1++)
+	for (a = '0'; a <= '9'; a++)
 	{
-		for (digit2 = digit1 + 1; digit2 < 10; digit2++)
+		for (b = '0'; b <= '9'; b++)
 		{
+			if (a < b)
+			{
+				putchar(a);
+				putchar(b);
 
-			putchar((digit1 % 10) + '0');
-			putchar((digit2 % 10) + '0');
-
-			if (digit1 == 8 && digit2 == 9)
-				continue;
-
-			putchar(',');
-			putchar(' ');
+				if (a != '8' || (a == '8' && b != '9'))
+				{
+					putchar(',');
+					putchar(' ');
+				}
+			}
 		}
 	}
+
+
 	putchar('\n');
+
 	return (0);
+
 }

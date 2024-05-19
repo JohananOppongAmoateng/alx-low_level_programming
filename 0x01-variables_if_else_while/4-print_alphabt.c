@@ -1,22 +1,28 @@
 #include <stdio.h>
-#include <ctype.h>
+#include <time.h>
+#include <stdlib.h>
+
 /**
-*main - Program to print alphabet letters except q and e followed by new line
-*
-*Return: return 0
-*/
+ * main - entry point
+ * Description: A program that prints the alphabet in lowercase
+ * followed by a new line.
+ * Return: return 0 always (success)
+ */
+
 int main(void)
 {
-	int letter;
+	char ch = 'a';
 
-	for (letter = 'a'; letter <= 'z'; letter++)
-	{
-		if (letter == 'q' || letter == 'e')
-		{
-			continue;
-		}
-		putchar(letter);
-	}
+	while (ch <= 'z')
+{
+	if (ch != 'e')
+	if (ch != 'q')
+
+	putchar(ch);
+	ch++;
+}
 	putchar('\n');
+
 	return (0);
+
 }

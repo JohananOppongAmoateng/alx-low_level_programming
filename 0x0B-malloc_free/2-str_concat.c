@@ -1,38 +1,41 @@
 #include "main.h"
+#include <stdlib.h>
+#include <stdio.h>
 
 /**
-* str_concat - a function that concatenates two strings.
-*@s1:First string
-*@s2:Second string
-*
-*Return: NULL in case of failure , but pointer to new string in
-*case of success
-*/
+ *str_concat - a program that concatenates two strings
+ *@s1: first string character
+ *@s2: second string character
+ *Return: address of the newly allocated memory
+ */
 
 char *str_concat(char *s1, char *s2)
 {
-char *concat_str;
-int index, concat_index = 0,  len = 0;
+	int i, j, dump1, dump2, dump;
+	char *paste;
 
-if (s1 == NULL)
-s1 = "";
+	dump1 = dump2 = 0;
+	if (s1 != NULL)
+	{
+		i = 0;
+		while (s1[i++] != '\0')
+			dump1++;
+	}
+	if (s2 != NULL)
+	{
+		i = 0;
+		while (s2[i++] != '\0')
+			dump2++;
+	}
+	dump = dump1 + dump2;
+	paste = (char *)malloc(sizeof(char) * (dump + 1));
+	if (paste == NULL)
+		return (NULL);
+	for (i = 0; i < dump1; i++)
+		paste[i] = s1[i];
+	for (j = 0; j < dump2; j++, i++)
+		paste[i] = s2[j];
+	paste[dump] = '\0';
 
-if (s2 == NULL)
-s2 = "";
-
-for (index = 0; s1[index] || s2[index]; index++)
-len++;
-
-concat_str = malloc(sizeof(char) * len);
-
-if (concat_str == NULL)
-return (NULL);
-
-for (index = 0; s1[index]; index++)
-concat_str[concat_index++] = s1[index];
-
-for (index = 0; s2[index]; index++)
-concat_str[concat_index++] = s2[index];
-
-return (concat_str);
+	return (paste);
 }

@@ -1,60 +1,46 @@
 #include "main.h"
 
 /**
-* infinite_add - C function that adds two numbers stored
-*in strings to a buffer.
-*Assumes that strings are never empty and
-*that numbers will always be positive, or 0.
-*Assumes there are only digits stored in the number strings.
-*If result can be stored in the buffer,
-*returns a pointer to the result.
-*If result cannot be stored in the buffer, returns `0`.
-*@n1:first number to be added
-*@n2:second number to be added
-*@r: store result
-*@size_r: size of buffer
-*Return:returns pointer to result
+*infinite_add -  a program that adds two numbers
+*@n1: the first number to be added
+*@n2: the second number to be added
+*@r: a buffer that the function can use to store it's result
+*@size_r: the size  of the buffer
+*Return: the pointer to dest
 */
-
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-}
+	int c, d, e, f, g, h;
 
-/**
-* add_strings - Adds the numbers stored in two strings.
-* @n1: The string containing the first number to be added.
-* @n2: The string containing the second number to be added.
-* @r: The buffer to store the result.
-* @r_index: The current index of the buffer.
-*
-* Return: If r can store the sum - a pointer to the result.
-*         If r cannot store the sum - 0.
-*/
-
-char *add_strings(char *n1, char *n2, char *r, int r_index)
-{
-int num, tens = 0;
-
-	for (; *n1 && *n2; n1--, n2--, r_index--)
+	for (c = 0; n1[c]; c++)
+		;
+	for (d = 0; n2[d]; d++)
+		;
+	if (c > size_r || d > size_r)
+		return (0);
+	g = 0;
+	for (c -= 1, d -= 1, e = 0; e < size_r - 1; c--, d--, e++)
 	{
-		num = (*n1 - '0') + (*n2 - '0');
-		num += tens;
-		*(r + r_index) = (num % 10) + '0';
-		tens = num / 10;
+		h = g;
+		if (c >= 0)
+			h += n1[c] - '0';
+		if (d >= 0)
+			h += n2[d] - '0';
+		if (c < 0 && d < 0 && h == 0)
+		{
+			break;
+		}
+		g = h / 10;
+		r[e] = h % 10 + '0';
 	}
-
-	for (; *n1; n1--; r_index++)
+	r[e] = '\0';
+	if (c >= 0 || d >= 0 || g)
+		return (0);
+	for (e -= 1, f = 0; f < e; e--, f++)
 	{
-		num = *(n1 - '0') + tens;
-		*(r + r_index) = (num % 10) + '0';
-		tens = num / 10;
+		g = r[e];
+		r[e] = r[f];
+		r[f] = g;
 	}
-
-	for (; *n2; n2--;  r_index--)
-	{
-		num = (*n2 - '0') + tens;
-		*(r + r_index) = (num % 10) + '0';
-		tens = num / 10;
-	}
-
+	return (r);
 }

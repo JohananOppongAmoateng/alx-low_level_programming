@@ -1,17 +1,21 @@
+#include <stdio.h>
+#include <time.h>
+#include <stdlib.h>
 #include "main.h"
+
 /**
-*print_alphabet - function that print alphabet
-*it prints in lowercase
-*Return: no return
-*/
+ * print_alphabet - Make the alphabet
+ * Return: return void always (success)
+ */
+
 void print_alphabet(void)
-
 {
-char ch;
-for (ch = 'a' ; ch <= 'z'; ch++)
+	char c = 'a';
 
+	while (c <= 'z')
 {
-_putchar(ch);
+	_putchar(c);
+	c++;
 }
-_putchar(10);
+	_putchar('\n');
 }
